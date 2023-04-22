@@ -1,0 +1,16 @@
+{{#if user}}
+
+<h2>Welcome to your profile, {{user.username}}</h2>
+ <div class="flex-column">
+    <div><img  style="width: 200px" src="/images/avatar-profile.png" alt="Profile photo"/></div>
+    <div>
+      <a class="btn btn-danger" style ="padding: 10px" href="/userProfile">Reload the page</a>
+      <form id="logout-form" style ="padding: 10px" action="/auth/logout" method="POST">
+        <button class="btn btn-danger">Logout</button>
+      </form>
+    </div>
+
+ </div>
+{{else}}
+<h2>Sorry! You are not logged in yet</h2>
+{{/if}}
